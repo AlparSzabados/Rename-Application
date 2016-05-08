@@ -1,23 +1,25 @@
 package rename
 
-import static RootFolder.SORTED_FILES
-import static rename.RenameProgram.*
+import static rename.RenameProgram.newName
+import static rename.RootFolder.FILE_NAMES_AS_LIST
+import static rename.RootFolder.SORTED_FILES
 import static rename.UserInput.readNumber
 import static rename.UserInput.readString
 
 class MainRename {
     static void main(String... args) {
-        newCounter = readNumber('Start with number:') - 1
-        fromExtension = readString('From extension:')
-        toExtension = readString('To extension:')
-        shouldDeleteSuffix = readString('Delete suffix (y / n) (Only used for special cases):').trim().toUpperCase() == "Y"
+        def newCounter = readNumber('Start with number:') - 1
+        def fromExtension = readString('From extension:')
+        def toExtension = readString('To extension:')
+        def shouldDeleteSuffix = readString('Delete suffix (y / n) (Only used for special cases):').trim().toUpperCase() == "Y"
 
-        for (file in SORTED_FILES) {
-            def newFile = newName(file)
-            println "Renaming '${file.name}' to '${newFile.name}'"
-            file.renameTo(newFile)
+        def newFile = newName(FILE_NAMES_AS_LIST(), newCounter, fromExtension, toExtension, shouldDeleteSuffix)
+
+        // TODO make it less confusig
+        for (file in 0..(SORTED_FILES.size() - 1)) {
+            println "Processing file: '${SORTED_FILES[file].name}"
+            println "Renaming '${SORTED_FILES[file].name}' to '${newFile[file]}'"
+            SORTED_FILES[file].renameTo("${SORTED_FILES[file].parent}/${newFile[file]}")
         }
-        readString('')
     }
 }
-
