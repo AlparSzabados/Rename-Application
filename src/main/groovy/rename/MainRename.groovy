@@ -16,10 +16,10 @@ class MainRename {
         def newFile = newName(fileNameAsList(), newCounter, fromExtension, toExtension, shouldDeleteSuffix)
 
         // TODO make it less confusig
-        for (file in 0..(SORTED_FILES.size() - 1)) {
-            println "Processing file: '${SORTED_FILES[file].name}"
-            println "Renaming '${SORTED_FILES[file].name}' to '${newFile[file]}'"
-            SORTED_FILES[file].renameTo("${SORTED_FILES[file].parent}/${newFile[file]}")
+        for (i in 0..(SORTED_FILES.size() - 1)) {
+            println "Processing file: '${SORTED_FILES[i].name}"
+            println "Renaming '${SORTED_FILES[i].name}' to '${newFile[i]}'"
+            SORTED_FILES[i].renameTo("${SORTED_FILES[i].parent}/${newFile[i]}")
         }
     }
 }
