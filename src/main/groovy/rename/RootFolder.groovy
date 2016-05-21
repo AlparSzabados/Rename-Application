@@ -8,7 +8,7 @@ class RootFolder {
     static List fileNameAsList() {
         def list = []
         for (file in SORTED_FILES) {
-            list += file.name.toString()
+            list += file.name
         }
         list
     }
