@@ -1,7 +1,7 @@
 package rename
 
 import static rename.RenameProgram.newName
-import static rename.RootFolder.FILE_NAMES_AS_LIST
+import static rename.RootFolder.fileNameAsList
 import static rename.RootFolder.SORTED_FILES
 import static rename.UserInput.readNumber
 import static rename.UserInput.readString
@@ -13,7 +13,7 @@ class MainRename {
         def toExtension = readString('To extension:')
         def shouldDeleteSuffix = readString('Delete suffix (y / n) (Only used for special cases):').trim().toUpperCase() == "Y"
 
-        def newFile = newName(FILE_NAMES_AS_LIST(), newCounter, fromExtension, toExtension, shouldDeleteSuffix)
+        def newFile = newName(fileNameAsList(), newCounter, fromExtension, toExtension, shouldDeleteSuffix)
 
         // TODO make it less confusig
         for (file in 0..(SORTED_FILES.size() - 1)) {
