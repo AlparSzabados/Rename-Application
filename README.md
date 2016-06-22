@@ -1,1 +1,1 @@
-Custom rename program I created for work.
+Created application for renaming Score files in ascending order.
