@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Application.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Application_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Application_main.iml" group="Rename-Application" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Application_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Application_test.iml" group="Rename-Application" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Program.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Program.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Program_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Program_main.iml" group="Rename-Program" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rename-Program_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Rename-Program_test.iml" group="Rename-Program" />

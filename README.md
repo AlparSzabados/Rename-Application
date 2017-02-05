@@ -1,1 +1,1 @@
-Created application for renaming Score files in ascending order.
+Application designed for renaming SCORE files in ascending order even if the files are split multiple times due to memory overflow.
